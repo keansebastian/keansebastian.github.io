@@ -189,6 +189,8 @@
     --color-body    : var(--color-gray-16);
     --color-border  : rgba(255, 255, 255, .05);
     --border-radius : 3px;
+
+    scrollbar-color: var(--color-gray-6) rgba(0, 0, 0, 0);
 }
 
 /* ------------------------------------------------------------------- 
@@ -322,10 +324,12 @@
 html {
     line-height              : 1.15;
     -webkit-text-size-adjust : 100%;
+    scrollbar-gutter: stable both-edges;
 }
 
 body {
     margin : 0;
+    overflow-x : hidden;
 }
 
 main {
@@ -1784,7 +1788,7 @@ img,
     background      : var(--color-body);
     z-index         : 500;
     height          : 100vh;
-    width           : 100%;
+    width           : 100vw;
     opacity         : 1;
 }
 
@@ -3857,18 +3861,25 @@ img.u-pull-left {
  * ## modal popup
  * ------------------------------------------------------------------- */
 .modal-popup {
-    max-width        : 1200px;
-    background-color : white;
+    border           : 1px solid rgba(255, 255, 255, .05);
+    border-radius    : 20px;
+    box-shadow       : 0 1px 1px rgba(0, 0, 0, 0.25), 0 2px 2px rgba(0, 0, 0, 0.25), 0 4px 4px rgba(0, 0, 0, 0.25), 0 8px 8px rgba(0, 0, 0, 0.25);
+    max-width        : calc(100vw - 12.8rem);
+    background-color : var(--color-gray-10);
     font-size        : calc(var(--text-size) * 0.9447);
     line-height      : var(--vspace-0_875);
-    color            : rgba(0, 0, 0, 0.75);
     overflow-y       : auto;
+    overflow-x       : auto;
     position         : relative;
-    max-height       : calc(100vh - 120px);
+    max-height       : calc(100vh - 12.8rem);
+    justify-content : center;
+    align-items     : center;
+    scrollbar-color : var(--color-gray-6) rgba(0, 0, 0, 0);
+    padding : 3rem;
 }
 
 .modal-popup img {
-    margin-bottom : var(--vspace-0_75);
+    margin-bottom : 0/*var(--vspace-0_25)*/;
 }
 
 .modal-popup h5 {
@@ -3878,11 +3889,13 @@ img.u-pull-left {
     font-weight   : 500;
     margin-top    : 0;
     margin-bottom : var(--vspace-0_25);
-    color         : black;
+    color         : #80a5f9;
 }
 
 .modal-popup__desc {
-    padding : var(--vspace-0_25) var(--vspace-1_25) var(--vspace-0_25);
+    padding : var(--vspace-1_25) var(--vspace-1) 0;
+    color : white;
+    /*margin : 0 var(--gutter);*/
 }
 
 .modal-popup__cat {
@@ -3890,7 +3903,7 @@ img.u-pull-left {
     margin-left  : 0;
     font-size    : var(--text-sm);
     line-height  : var(--vspace-0_5);
-    color        : rgba(0, 0, 0, 0.6);
+    color        : rgba(255, 255, 255, 0.6)/*rgba(0, 0, 0, 0.6)*/;
     padding-left : calc(0.875 * var(--space));
     position     : relative;
 }
@@ -3940,8 +3953,10 @@ img.u-pull-left {
 }
 
 .carousel-container {
-    width: 100%;
     overflow: hidden;
+    border           : 1px solid rgba(255, 255, 255, .05);
+    border-radius    : 10px;
+    box-shadow       : 0 1px 1px rgba(0, 0, 0, 0.25), 0 2px 2px rgba(0, 0, 0, 0.25), 0 4px 4px rgba(0, 0, 0, 0.25), 0 8px 8px rgba(0, 0, 0, 0.25);
 }
   
 .carousel-wrapper {
@@ -3949,7 +3964,8 @@ img.u-pull-left {
     overflow-y: hidden;
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;
-    margin-bottom: -10px;
+    scrollbar-color: var(--color-gray-6) rgba(0, 0, 0, 0);
+    margin-bottom: 0px;
 }
 
 .carousel {
@@ -3957,8 +3973,8 @@ img.u-pull-left {
 }
 
 .carousel img {
-    height: 450px;
-    width: auto;
+    height: auto;
+    max-height: 425px;
     vertical-align: middle;
 }
 

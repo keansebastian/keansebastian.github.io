@@ -352,7 +352,8 @@
                 document.querySelector(modalbox),
                 {
                     onShow: function(instance) {
-                        document.body.style.overflow = 'hidden';
+                        document.body.style.overflowY = 'hidden';
+                        document.querySelector('html').style.scrollbarGutter = 'auto';
 
                         //detect Escape key press
                         document.addEventListener("keydown", function(event) {
@@ -364,7 +365,8 @@
                     },
                     
                     onClose: function(instance) {
-                        document.body.style.overflow = 'scroll';
+                        document.body.style.overflowY = 'auto';
+                        document.querySelector('html').style.scrollbarGutter = 'stable both-edges';
                     }
                 }
             )

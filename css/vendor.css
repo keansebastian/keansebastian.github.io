@@ -784,25 +784,27 @@ button.swiper-pagination-bullet {
     align-items     : center;
     top             : 0;
     left            : 0;
-    width           : 100%;
+    width           : 100vw;
     height          : 100vh;
-    background      : var(--color-body);
+    /*background      : var(--color-gray-10);*/
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
     opacity         : 0.01;
-    transition      : opacity 0.4s ease;
+    transition      : all 0.4s ease;
     z-index         : 1000;
-    will-change     : opacity;
+    will-change     : all;
 }
 
 .basicLightbox::after {
     content             : "";
     position            : absolute;
-    top                 : 1.8rem;
-    right               : 1.8rem;
+    top                 : 1.5rem;
+    right               : 1.5rem;
     width               : 2em;
     height              : 2em;
     background          : url(../images/icons/icon-close.svg);
     background-position : center;
-    background-size     : 1.8rem 1.8rem;
+    background-size     : 1.5rem 1.5rem;
     background-repeat   : no-repeat;
     cursor              : pointer;
 }
