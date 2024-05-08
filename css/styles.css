@@ -324,7 +324,7 @@
 html {
     line-height              : 1.15;
     -webkit-text-size-adjust : 100%;
-    scrollbar-gutter: stable both-edges;
+    scrollbar-gutter: stable;
 }
 
 body {
@@ -4111,6 +4111,16 @@ img.u-pull-left {
     .folio-list__proj-link {
         right : var(--vspace-0_5);
     }
+
+    .modal-popup {
+        max-width  : calc(100vw - 3.2rem);
+        padding : 1.2rem;
+    }
+
+    .modal-popup h5 {
+        padding-top : 4rem;
+    }    
+
 }
 
 @media screen and (max-width: 500px) {

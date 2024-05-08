@@ -366,7 +366,7 @@
                     
                     onClose: function(instance) {
                         document.body.style.overflowY = 'auto';
-                        document.querySelector('html').style.scrollbarGutter = 'stable both-edges';
+                        document.querySelector('html').style.scrollbarGutter = 'stable';
                     }
                 }
             )
