@@ -788,6 +788,7 @@ button.swiper-pagination-bullet {
     height          : 100vh;
     /*background      : var(--color-gray-10);*/
     background-color: rgba(0, 0, 0, 0.7);
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     opacity         : 0.01;
     transition      : all 0.4s ease;
