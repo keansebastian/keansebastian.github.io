@@ -102,7 +102,7 @@
     /* color-1(#eabe7c)
      * color-2(#23967f)
      */
-    --color-1 : #80a5f9;
+    --color-1 : #7BA6DE /*#80a5f9*/;
     --color-2 : white;
 
     /* theme color variations
@@ -3353,17 +3353,15 @@ img.u-pull-left {
 .intro-scrolldown svg {
     height : var(--vspace-0_75);
     width  : var(--vspace-0_75);
-    transition : all .3s ease-in-out;
 }
 
 .intro-scrolldown svg path {
-    fill       : white;
+    fill       : var(--color-2);
+    transition : all .3s ease-in-out;
 }
 
-.intro-scrolldown:focus svg path,
 .intro-scrolldown:hover svg path {
     fill : var(--color-1);
-    /*transition : all 0.3s ease-in-out;*/
 }
 
 /* ------------------------------------------------------------------- 
@@ -3714,7 +3712,7 @@ img.u-pull-left {
     position            : relative;
 }
 
-.folio-list__item-link:focus,
+/*.folio-list__item-link:focus,*/
 .folio-list__item-link:hover {
     color   : var(--color-1);
     outline : 0;
@@ -3762,7 +3760,11 @@ img.u-pull-left {
     z-index          : 1;
     content          : "";
     display          : block;
-    background-color : rgba(255, 255, 255, 0.75);
+    /*background-color : rgba(128, 128, 128, 0.25);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 20px 6px rgba(222, 222, 222, 0.25);*/
+    box-shadow: 0 0 20px 6px rgba(123, 166, 222, 0.3);
     position         : absolute;
     top              : 0;
     left             : 0;
@@ -3777,7 +3779,7 @@ img.u-pull-left {
 .folio-list__item-pic::after {
     z-index     : 2;
     display     : block;
-    content     : "+";
+    /*content     : "+";*/
     font-family : var(--font-1);
     font-weight : 300;
     font-size   : 2.2rem;
@@ -3889,7 +3891,7 @@ img.u-pull-left {
     font-weight   : 500;
     margin-top    : 0;
     margin-bottom : var(--vspace-0_25);
-    color         : #80a5f9;
+    color         : var(--color-1);
 }
 
 .modal-popup__desc {
@@ -4358,6 +4360,7 @@ img.u-pull-left {
 .ss-go-top a:hover {
     background-color : var(--color-1);
     border-color     : var(--color-1);
+    box-shadow: 0 0 20px 6px rgba(123, 166, 222, 0.3);
 }
 
 .ss-go-top a:focus svg path,
