@@ -3743,6 +3743,8 @@ img.u-pull-left {
     position : absolute;
     top      : 0;
     left     : 0;
+    border         : 1.5px solid var(--color-border);
+
 }
 
 .folio-list__item-pic img {
