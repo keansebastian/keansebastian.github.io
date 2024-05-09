@@ -3681,6 +3681,7 @@ img.u-pull-left {
 .s-works {
     padding-top    : var(--vspace-3);
     /*padding-bottom : var(--vspace-3_5);*/
+    visibility: hidden;
 }
 
 .s-works .h1 {
@@ -3696,6 +3697,7 @@ img.u-pull-left {
     margin-top        : var(--vspace-2);
     margin-bottom     : var(--vspace-1);
     margin-left       : 0;
+    visibility: hidden;
 }
 
 .folio-list__item {
@@ -4102,6 +4104,10 @@ img.u-pull-left {
         padding-top    : var(--vspace-4);
         padding-bottom : var(--vspace-3);
     }
+
+    .modal-popup {
+        max-width  : calc(100vw - 3.2rem);
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -4115,14 +4121,8 @@ img.u-pull-left {
     }
 
     .modal-popup {
-        max-width  : calc(100vw - 3.2rem);
-        padding : 1.2rem;
+        padding : 1rem;
     }
-
-    /*.modal-popup h5 {
-        padding-top : 4rem;
-    }*/    
-
 }
 
 @media screen and (max-width: 500px) {
