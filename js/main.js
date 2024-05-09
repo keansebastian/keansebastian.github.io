@@ -294,10 +294,13 @@
                         targets: current.querySelectorAll("[data-animate-el]"),
                         opacity: [0, 1],
                         translateY: [25, 0],
-                        delay: anime.stagger(400, {start: 200}),
+                        delay: anime.stagger(600, {start: 200}),
                         duration: 1000,
                         easing: 'easeInOutQuart',
                         begin: function(anim) {
+                            current.querySelectorAll("[data-animate-el]").forEach(el => {
+                                el.style.visibility = 'visible';
+                            });
                             current.classList.add("ss-animated");
                         }
                     });
