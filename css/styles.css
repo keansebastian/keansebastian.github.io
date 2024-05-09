@@ -2956,7 +2956,7 @@ img.u-pull-left {
 .s-header {
     --box-shadow : 0 1px 1px rgba(0, 0, 0, 0.25), 0 2px 2px rgba(0, 0, 0, 0.25), 0 4px 4px rgba(0, 0, 0, 0.25), 0 8px 8px rgba(0, 0, 0, 0.25);
     z-index      : 100;
-    width        : 100%;
+    width        : 100vw;
     position     : fixed;
     top          : 0;
     left         : 0;
@@ -3040,12 +3040,12 @@ img.u-pull-left {
 }*/
 
 .main-nav-wrap {
-    width: 100%;
+    width: 100vw;
 }
 
 .main-nav {
     padding: 0;
-    /*display: flex;*/
+    display: flex;
     justify-content: flex-end; /* Add this line*/
 }
 
@@ -3063,13 +3063,12 @@ img.u-pull-left {
     display: flex;
     flex-flow: row nowrap;
     margin: 0;
-    /*padding-left: 0;
-    padding-right: 0;*/
+    padding: 0;
     background-color: var(--color-body);
     border-width: 1px;
     border-color: var(--color-border);
-    border-style: none none solid none;
-    width: 100%; /* Add this line */
+    border-style: none solid solid solid;
+    width: 100vw; /* Add this line */
     box-shadow: var(--box-shadow);
 }
 
@@ -3083,8 +3082,7 @@ img.u-pull-left {
 }
 
 .main-nav li:last-child {
-    padding-right: 2rem;
-    border-right: none;
+    padding-right: 1rem;
 }
 
 /* Add this block 
@@ -3107,7 +3105,7 @@ img.u-pull-left {
 
 .mobile-menu-toggle span {
     display          : block;
-    background-color : white;
+    background-color : rgba(255, 255, 255, 0);
     width            : 24px;
     height           : 1px;
     margin-top       : -1px;
@@ -3135,12 +3133,14 @@ img.u-pull-left {
 }
 
 .mobile-menu-toggle span::before {
-    top                 : -8px;
+    top                 : -4px;
+    background-color : white;
     transition-property : top, transform;
 }
 
 .mobile-menu-toggle span::after {
-    bottom              : -8px;
+    bottom              : -4px;
+    background-color : white;
     transition-property : bottom, transform;
 }
 
