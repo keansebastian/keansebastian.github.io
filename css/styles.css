@@ -3877,7 +3877,7 @@ img.u-pull-left {
     justify-content : center;
     align-items     : center;
     scrollbar-color : var(--color-gray-6) rgba(0, 0, 0, 0);
-    padding : 3rem;
+    padding         : 2rem;
 }
 
 .modal-popup img {
@@ -3976,7 +3976,7 @@ img.u-pull-left {
 
 .carousel img {
     height: auto;
-    max-height: 425px;
+    max-height: 60vh;
     vertical-align: middle;
 }
 
@@ -4119,9 +4119,9 @@ img.u-pull-left {
         padding : 1.2rem;
     }
 
-    .modal-popup h5 {
+    /*.modal-popup h5 {
         padding-top : 4rem;
-    }    
+    }*/    
 
 }
 
