@@ -3697,7 +3697,6 @@ img.u-pull-left {
     margin-top        : var(--vspace-2);
     margin-bottom     : var(--vspace-1);
     margin-left       : 0;
-    visibility: hidden;
 }
 
 .folio-list__item {
@@ -3744,7 +3743,6 @@ img.u-pull-left {
     top      : 0;
     left     : 0;
     border         : 1.5px solid var(--color-border);
-
 }
 
 .folio-list__item-pic img {

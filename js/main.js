@@ -45,13 +45,12 @@
         targets: [ '.s-intro .text-pretitle', '.s-intro .text-huge-title'],
         /*translateX: [100, 0],
         opacity: [0, 1],
-        delay: anime.stagger(400)*/
+        delay: anime.stagger(400, {start: 100})*/
         opacity: [0, 1],
         translateY: [25, 0],
-        delay: anime.stagger(400, {start: 200}),
-        duration: 1000,
+        duration: 800,
         easing: 'easeInOutQuart',
-    })
+    }, '-=200')
     /*.add({
         targets: '.circles span',
         keyframes: [
@@ -70,9 +69,9 @@
         targets: '.intro-scrolldown',
         translateY: [25, 0],
         opacity: [0, 1],
-        duration: 1000,
-        easing: 'easeInOutQuart',
-    }, '-=1000');
+        duration: 800,
+        easing: 'easeInOutCubic',
+    }, '-=800');
 
 
 
