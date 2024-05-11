@@ -4169,7 +4169,7 @@ img.u-pull-left {
     }
 
     .modal-popup__desc {
-        padding : 0 var(--vspace-1) var(--vspace-0_25);
+        padding : var(--vspace-1_25) var(--vspace-1) var(--vspace-0_25);
     }
 }
 
